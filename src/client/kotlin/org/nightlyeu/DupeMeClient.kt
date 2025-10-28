@@ -4,6 +4,7 @@ import net.fabricmc.api.ClientModInitializer
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper
 import net.minecraft.client.option.KeyBinding
+import net.minecraft.util.Identifier
 import org.lwjgl.glfw.GLFW
 import org.slf4j.LoggerFactory
 
@@ -14,7 +15,7 @@ object DupeMeClient : ClientModInitializer {
 		KeyBinding(
 			"key.dupeme.keybind",
 			GLFW.GLFW_KEY_EQUAL,
-			"key.categories.dupeme"
+            KeyBinding.Category.create(Identifier.of("key.categories.dupeme"))
 		)
 	)
 
