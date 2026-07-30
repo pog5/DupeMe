@@ -1,0 +1,21 @@
+architectury {
+    platformSetupLoomIde()
+    neoForge()
+}
+
+sourceSets {
+    main {
+        java.srcDir(rootProject.file("common/src/main/java"))
+        resources.srcDir(rootProject.file("common/src/main/resources"))
+    }
+}
+
+dependencies {
+    neoForge "net.neoforged:neoforge:${rootProject.neoforge_version}"
+}
+
+processResources {
+    def props = [version: project.version, minecraft: rootProject.minecraft_version, java: rootProject.java_version]
+    inputs.properties props
+    filesMatching("META-INF/neoforge.mods.toml") { expand props }
+}

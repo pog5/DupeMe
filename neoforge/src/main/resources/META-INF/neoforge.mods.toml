@@ -1,0 +1,28 @@
+modLoader = "javafml"
+loaderVersion = "[1,)"
+license = "BSD-3-Clause"
+issueTrackerURL = "https://github.com/pog5/dupeme/issues"
+
+[[mods]]
+modId = "dupeme"
+version = "${version}"
+displayName = "DupeMe"
+authors = "pog5"
+description = '''
+Gives you 2x of what you're holding!
+'''
+logoFile = "assets/dupeme/icon.png"
+
+[[dependencies.dupeme]]
+modId = "neoforge"
+type = "required"
+versionRange = "[0,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.dupeme]]
+modId = "minecraft"
+type = "required"
+versionRange = "[${minecraft},)"
+ordering = "NONE"
+side = "BOTH"

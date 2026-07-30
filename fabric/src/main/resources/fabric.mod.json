@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "dupeme",
+  "version": "${version}",
+  "name": "DupeMe",
+  "description": "Gives you 2x of what you're holding!",
+  "authors": ["pog5"],
+  "contact": {"sources": "https://github.com/pog5/dupeme"},
+  "license": "BSD-3-Clause",
+  "icon": "assets/dupeme/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["org.nightlyeu.dupeme.DupeMeFabric"],
+    "client": ["org.nightlyeu.dupeme.DupeMeFabricClient"]
+  },
+  "depends": {
+    "fabricloader": ">=${fabric_loader_version}",
+    "minecraft": ">=${minecraft}",
+    "fabric-api": "*"
+  }
+}
